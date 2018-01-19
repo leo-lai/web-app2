@@ -1,0 +1,177 @@
+html{font-size: 26.67px; }
+body{ font-size:  0.53rem; color: #475669; }
+h2, h3, h4, strong, b, th{ font-weight: 600;}
+h3{font-size: 0.65rem;}
+h4{font-size: 0.55rem;}
+::-webkit-input-placeholder{color:#ccc;}
+.l-hidden-box{visibility: hidden; height: 0; overflow: hidden;}
+.l-text-link{text-decoration: none;}
+#app{height:  100%; position: relative; min-width: 1240px;}
+.l-header{
+	background: #334057; color: #fff; padding: 0 ; transition: 0.3s linear;
+	.el-dropdown-link{ color: #fff; font-size: 0.6rem; }
+	.l-header-nav {background: #334057; padding: 0 0.75rem; margin: auto; max-width: 1300px; box-sizing: border-box; color: #fff; }
+	.l-header-logo{min-width: 10%; padding: 0 0.75rem; font-size: 0.8rem; }
+}
+.l-header-tabs{
+	background: #fff; overflow: hidden;
+	.el-tabs__nav-wrap{margin-top: 20px;}
+	.el-tabs__content{display: none;}
+	.el-tabs__item:first-child{width: 100px; text-align: center;}
+}
+.l-menu{ border: none;}
+.el-menu--horizontal>.el-menu-item, .el-submenu__title{font-size: 15px;}
+.el-menu--horizontal .el-menu-item:focus,
+.el-menu--horizontal .el-menu-item:hover,
+.el-menu--horizontal .el-submenu__title:hover, 
+.el-submenu.is-opened .el-submenu__title{ background: rgb(61, 79, 111) !important;}
+.el-menu--horizontal>.el-submenu.is-active .el-submenu__title,
+.el-menu--horizontal>.el-menu-item.is-active{border-bottom-width: 3px; color: #fff !important;}
+
+.l-main{ padding: 0 ; position: relative; overflow-x: hidden; }
+.l-main-body{ padding: 0.75rem; margin: auto; max-width: 1200px;}
+.l-breadcrumb{ padding: 0.75rem; margin-bottom: -0.75rem; position: relative; z-index: 1; }
+.l-copy-right{text-align: center; font-size: 0.5rem; color: #ccc; padding: 0.75rem 0;}
+.l-fullscreen{
+	.l-header{ 
+		transform: translateY(-60px);
+		position: fixed; top:0; left: 0; right: 0; z-index: 100;
+	}
+	.l-header:hover{ transform: translateY(0); }
+	.l-header::after{ content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px;}
+	.l-aside{
+		transform: translateX(-8.5rem);
+		position: fixed; top:0; left: 0; bottom: 0; z-index: 101;
+	}
+	.l-aside-collapse{transform: translateX(-64px);}
+	.l-aside:hover{transform: translateX(0); }
+	.l-aside::after{ content: ''; position: absolute; right: -1px; top: 0; bottom: 0; width: 1px;}
+}
+
+.el-card{color: #475669;}
+.el-card__header{
+	padding: 12px 20px;
+	.el-button--text{padding: 5px;}
+}
+
+.l-table-hdbg{
+	width: 100%;
+	th{background: #e5e9f2; }
+	th>.cell{white-space: nowrap;}
+	td{padding: 9px 0;}
+	th.l-fs-xs{font-size: 14px !important;}
+	td.l-fs-xs{font-size: 12px !important;}
+	.el-table__body{width: auto !important;}
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td{
+	background: rgba(239, 239, 244, 0.6);
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+	background-color: rgba(64, 158, 255, 0.2);
+}
+.el-table__row ._editipt{
+	padding: 10px; 
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #d8dce5;
+}
+.el-table__row ._editipt:disabled{
+	padding: 10px 0; border-color: transparent; background-color: transparent;
+}
+
+.l-form1{
+	.el-form-item__content{width: 204px;}
+	.el-date-editor.el-input, .el-date-editor.el-input__inner{width: 100%;}
+	._flex{
+		display: flex;
+		.el-form-item__content{flex: 1; padding-right: 1px;}
+	}
+}
+.l-form1._disabled{position: relative;}
+.l-form1._disabled:after{	content: ''; top:0; left: 0; width: 100%; height: 100%; position: absolute;}
+.el-button--text.l-margin-r-s{margin-right: 10px;}
+
+.l-basedata-menu{
+	line-height: 50px;
+	.el-tree-node__expand-icon{color: #333f57; font-weight: 600; margin-left: 15px;}
+	.el-icon-caret-right:before{content: '\E62B'}
+	.el-tree-node__expand-icon.expanded{transform: rotate(180deg);}
+	.el-tree-node__expand-icon.expanded:before{content: '\E621'}
+	.el-tree-node__expand-icon.is-leaf{visibility: hidden;}
+	.el-tree-node__content{height: auto;}
+	>.el-tree-node{ border-bottom: 1px solid #efeff4;}
+	>.el-tree-node:nth-child(2n){ background: rgba(239, 239, 244, 0.6); }
+	&.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
+		background: rgba(64, 158, 255, 0.3)
+	}
+	.el-tree-node__content:hover,{
+		background: rgba(64, 158, 255, 0.1)
+	}
+}
+
+.l-padding-t-0 .el-dialog__body{padding-top: 15px; padding-bottom: 15px;}
+.l-table-info{
+	border-collapse: collapse; width: 100%;
+	*{box-sizing: border-box;}
+	caption{text-align: left; color: rgba(147, 159, 177, 0.6);; padding: 5px 0;}
+	td{padding: 10px 20px; border:1px solid #e5e9f2;}
+	td._tit{background-color: rgba(229, 233, 242, 1); white-space: nowrap; min-width: 100px;}
+	td._cont{min-width: 120px;}
+	tr:nth-of-type(even) td._tit{background-color: rgba(229, 233, 242, 0.3);}
+	._ipt{border: 1px solid #ccc; border-radius: 2px; padding: 5px; width: 100%; }
+	._ipt2{border: none; padding: 5px; width: 100%; }
+	._radio .el-radio{min-width: 55px; display: inline-block;}
+}
+
+.l-block-tit{color: rgba(147, 159, 177, 0.6);; margin: 0.75rem 0 0.25rem; font-size: 12px;}
+
+.l-car-spec{
+	list-style: none; margin:0; padding: 0;
+	.el-checkbox{display: inline-block; margin: 0 10px 5px 0; white-space: nowrap; min-width: 100px;}
+}
+
+.l-gou-list{
+	list-style: none; margin:0; padding: 0;
+	li{display: inline-block; margin: 0 10px 5px 0; white-space: nowrap; min-width: 100px;}
+	li i{margin-right: 2px;}
+}
+
+.curved_box {
+    display: inline-block;
+    background-color: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+    position: relative;
+}
+.curved_box:before {
+    transform: skew(-15deg) rotate(-6deg);
+    left: 15px;
+}
+.curved_box:after {
+    transform: skew(15deg) rotate(6deg);
+    right: 15px;
+}
+.curved_box:before, .curved_box:after {
+    width: 70%;
+    height: 55%;
+    content: ' ';
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 10px;
+    z-index: -1;	
+}
+
+.l-text-editor{line-height: 1.6;}
+.l-convert-doing{opacity: 0.3}
+.quill-editor:not(.bubble) .ql-container,
+.quill-editor:not(.bubble) .ql-container .ql-editor {
+  min-height: 8rem;
+  padding-bottom: 1rem;
+}
+
+.el-button+.el-button--text{margin-left: 5px;}
+.el-checkbox{ margin-right: 30px; }
+.el-checkbox:last-child{margin-right: 0;}
+.el-checkbox+.el-checkbox{margin-left: 0;}
+
+.el-form-item__error{white-space: nowrap;}
